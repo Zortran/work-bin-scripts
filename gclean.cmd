@@ -1,0 +1,1 @@
+@git branch | findstr /v "* master" | xargs -r git branch -D
