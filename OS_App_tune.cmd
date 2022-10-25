@@ -13,7 +13,7 @@ if %errorLevel% == 0 (
 ) else (
     echo Failure: Administrative rights require.
 )
-set "Choco_clean=thunderbird telegram vscode"
+set "Choco_clean=thunderbird telegram vscode docker"
 for %%i in (%Choco_clean%) do (
   @echo on
   pushd C:\ProgramData\chocolatey\lib\
