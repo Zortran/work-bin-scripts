@@ -5,12 +5,19 @@ set "VSCode=vscode.install vscode-ansible vscode-docker vscode-python vscode-go 
 net session >nul 2>&1
 if %errorLevel% == 0 (
     for %%i in (%OptApp%) do (
-      choco upgrade -y %%i --params "/InstallDir:c:\opt\%%i"
+      choco install -y %%i --params "/InstallDir:c:\opt\%%i"
     )
-  choco upgrade -y %AppList%
-  choco upgrade -y %VSCode%
+  choco install -y %AppList%
+  choco install -y %VSCode%
 
 ) else (
     echo Failure: Administrative rights require.
+)
+set "Choco_clean=thunderbird telegram vscode docker"
+for %%i in (%Choco_clean%) do (
+  @echo on
+  pushd C:\ProgramData\chocolatey\lib\
+  for /f "usebackq tokens=*" %%a in (`dir /b %%i*`) do (rmdir /s /q %%a)
+  popd
 )
 pause
