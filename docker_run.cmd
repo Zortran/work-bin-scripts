@@ -1,2 +1,1 @@
-@echo off
-start docker run --rm -it %*
+@start docker run --rm -it %*

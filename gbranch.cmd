@@ -1,1 +1,1 @@
-@git branch -v
+@git branch -v %*

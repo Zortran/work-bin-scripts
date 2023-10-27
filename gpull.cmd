@@ -1,2 +1,1 @@
-@echo off
-git pull -p --recurse-submodules origin %*
+@git pull -p --recurse-submodules origin %*

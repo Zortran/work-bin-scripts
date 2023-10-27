@@ -1,1 +1,1 @@
-@git reset --recurse-submodules --hard
+@git reset --recurse-submodules --hard %*
