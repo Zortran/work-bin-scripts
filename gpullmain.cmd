@@ -1,2 +1,1 @@
-@echo off
-git pull --recurse-submodules --rebase origin main %*
+@git pull --recurse-submodules --rebase origin/main %*
