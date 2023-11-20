@@ -1,2 +1,2 @@
-@powershell -command "Get-ChildItem -Directory -Force -Recurse *.git | ForEach-Object { $OLDDIR=$PWD; write $_.Parent.FullName; cd $_; git fetch --all -pPf; git branch -av | sls '\[gone\]'|foreach {git branch -D ($_ -split '\s+')[1]}; cd $OLDDIR }"
+@pwsh -command "Get-ChildItem -Directory -Force -Recurse *.git | ForEach-Object -Parallel { $OLDDIR=$PWD; cd $_; $LOG= & { git fetch --all -pPf; git branch -av | sls '\[gone\]'|foreach {git branch -D ($_ -split '\s+')[1]} }; if (-not ([string]::IsNullOrEmpty($LOG))) {write $_.Parent.FullName; write $LOG}; cd $OLDDIR }"
 ::@git branch | findstr /v "* master" | xargs -r git branch -D
