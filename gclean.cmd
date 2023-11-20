@@ -1,1 +1,1 @@
-@(git checkout main||git cheeckout master) && git fetch --all -pPf && git branch -av | awk  '/\[gone\]/{print $1}'|xargs -r git branch -D
+@ (git checkout main||git checkout master) && git fetch -pPf --all && git branch -av | awk  '/\[gone\]/{print $1}'|xargs -r git branch -D
