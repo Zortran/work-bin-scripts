@@ -1,0 +1,1 @@
+@git push  --push-option=ci.skip %*
