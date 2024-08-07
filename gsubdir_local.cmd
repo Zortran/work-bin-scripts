@@ -1,0 +1,2 @@
+@pwsh -command "Get-ChildItem -Directory -Force -Recurse *.git | ForEach-Object -Parallel { cd $_; $LOG=&{ git fetch --all -pPf; git branch -v | Select-String -NotMatch '^(\*)?\s+(master|main|dev) ' }; if (-not ([string]::IsNullOrEmpty($LOG))) {write $_.Parent.FullName; write $LOG} }"
+::@git branch | findstr /v "* master" | xargs -r git branch -D
