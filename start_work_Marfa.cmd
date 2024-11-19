@@ -1,5 +1,5 @@
 @echo off
-set programs_list= "C:\Program Files\Mozilla Thunderbird\thunderbird.exe" "C:\Program Files\Telegram Desktop\Telegram.exe" "C:\Program Files\KeePass Password Safe 2\KeePass.exe" "C:\Program Files (x86)\Yandex\Punto Switcher\punto.exe" "C:\Users\zortr\AppData\Local\slack\slack.exe" "C:\Program Files\Fortinet\FortiClient\FortiClient.exe" "C:\Program Files\Docker\Docker\Docker Desktop.exe"
+set programs_list= "C:\Program Files\Mozilla Thunderbird\thunderbird.exe" "%APPDATA%\Telegram Desktop\Telegram.exe" "C:\Program Files\KeePass Password Safe 2\KeePass.exe" "C:\Program Files (x86)\Yandex\Punto Switcher\punto.exe" "C:\Users\zortr\AppData\Local\slack\slack.exe" "C:\Program Files\Fortinet\FortiClient\FortiClient.exe" "C:\Program Files\Docker\Docker\Docker Desktop.exe"
 for %%i in (%programs_list%); do (
   echo %%i
   if exist %%i (
