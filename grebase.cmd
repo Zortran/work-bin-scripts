@@ -1,4 +1,5 @@
 @git fetch --all -pPf
+@git pull
 @git rebase origin/master
 @call gs.cmd
 @REM @echo off

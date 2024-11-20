@@ -1,1 +1,1 @@
-git fetch -pPf --all && git rebase $(git symbolic-ref refs/remotes/origin/HEAD --short) && git status -sbu
+git fetch -pPf --all && git pull && git rebase $(git symbolic-ref refs/remotes/origin/HEAD --short) && git status -sbu
