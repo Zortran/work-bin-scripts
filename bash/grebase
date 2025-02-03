@@ -1,0 +1,2 @@
+#!/bin/sh
+git fetch --all -pPf && git rebase "$(git symbolic-ref refs/remotes/origin/HEAD --short)" && git status -sbu
