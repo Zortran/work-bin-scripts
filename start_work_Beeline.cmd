@@ -9,3 +9,7 @@ for %%i in (%programs_list%); do (
     echo NOT FOUND
   )
 )
+tasklist /fi "IMAGENAME eq pageant.exe" | find /i "pageant.exe" || (
+  del %USERPROFILE%\.ssh\ssh-sock.sock
+  "C:\Program Files\PuTTY\pageant.exe" --unix %USERPROFILE%\.ssh\ssh-sock.sock --openssh-config %USERPROFILE%\.ssh\pageant.conf > nul
+)
