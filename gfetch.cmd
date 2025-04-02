@@ -1,1 +1,1 @@
-@git fetch --all -pPf %*
+@git fetch --all --prune --prune-tags --tags --force %*

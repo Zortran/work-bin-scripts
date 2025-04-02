@@ -1,1 +1,1 @@
-@git pull -pPf --recurse-submodules origin %*
+@git pull --prune --tags --force --recurse-submodules origin %*
