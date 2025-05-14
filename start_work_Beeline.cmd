@@ -1,5 +1,5 @@
 @echo off
-set programs_list= "C:\Program Files\PuTTY\pageant.exe" "C:\Program Files\VMware\VMware Horizon View Client\vmware-view.exe" "C:\Users\zortr\AppData\Local\Programs\time-desktop\TiMe.exe" "C:\Program Files\Telegram Desktop\Telegram.exe" "C:\Program Files\KeePass Password Safe 2\KeePass.exe" "C:\Users\zortr\AppData\Local\Yandex\Punto Switcher\punto.exe" "C:\Users\zortr\AppData\Local\Programs\ktalk\ktalk.exe" "C:\Program Files\TiMe\TiMe.exe" "C:\Program Files\Docker\Docker\Docker Desktop.exe" "C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe"
+set programs_list= "C:\Program Files\PuTTY\pageant.exe" "C:\Program Files\Omnissa\Omnissa Horizon Client\horizon-client.exe" "C:\Users\zortr\AppData\Local\Programs\time-desktop\TiMe.exe" "C:\Program Files\Telegram Desktop\Telegram.exe" "C:\Program Files\KeePass Password Safe 2\KeePass.exe" "C:\Users\zortr\AppData\Local\Yandex\Punto Switcher\punto.exe" "C:\Users\zortr\AppData\Local\Programs\ktalk\ktalk.exe" "C:\Program Files\TiMe\TiMe.exe" "C:\Program Files\Docker\Docker\Docker Desktop.exe" "C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe"
 :: "C:\Program Files\TrueConf\Client\TrueConf.exe"
 for %%i in (%programs_list%); do (
   echo %%i
@@ -13,3 +13,5 @@ tasklist /fi "IMAGENAME eq pageant.exe" | find /i "pageant.exe" || (
   del %USERPROFILE%\.ssh\ssh-sock.sock
   "C:\Program Files\PuTTY\pageant.exe" --unix %USERPROFILE%\.ssh\ssh-sock.sock --openssh-config %USERPROFILE%\.ssh\pageant.conf > nul
 )
+
+explorer.exe shell:AppsFolder\BlueMail.BlueMailEmail_t08282y3j4hc4!BlueMail.BlueMailEmail
