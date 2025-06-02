@@ -1,11 +1,15 @@
-@git fetch --all -pPf
-@git pull
-@git rebase origin/master
-@call gs.cmd
-@REM @echo off
-@REM For /F "Delims=" %%I In ('git branch --show-curren') Do Set BRANCH=%%~I
-@REM git checkout master
-@REM git pull --rebase origin master
-@REM git checkout %BRANCH%
-@REM git rebase master
-@REM git pull
+@echo off
+git fetch --all -pPf
+if "%~1"=="" (
+  git branch -a | find /i "origin/master" > nul
+  if errorlevel 1 (
+    set BASE_BRANCH=main
+  ) else (
+    set BASE_BRANCH=master
+  )
+) else (
+  set BASE_BRANCH=%1
+)
+git pull
+git rebase origin/%BASE_BRANCH%
+call gs.cmd
