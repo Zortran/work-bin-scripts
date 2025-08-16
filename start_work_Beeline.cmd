@@ -9,9 +9,8 @@ for %%i in (%programs_list%); do (
     echo NOT FOUND
   )
 )
-tasklist /fi "IMAGENAME eq pageant.exe" | find /i "pageant.exe" || (
-  del %USERPROFILE%\.ssh\ssh-sock.sock
-  "C:\Program Files\PuTTY\pageant.exe" --unix %USERPROFILE%\.ssh\ssh-sock.sock --openssh-config %USERPROFILE%\.ssh\pageant.conf > nul
-)
+taskkill /f /t /im pageant.exe
+del %USERPROFILE%\.ssh\ssh-sock.sock
+start /b "pageant.exe" "C:\Program Files\PuTTY\pageant.exe" --unix %USERPROFILE%\.ssh\ssh-sock.sock --openssh-config %USERPROFILE%\.ssh\pageant.conf > nul
 
 explorer.exe shell:AppsFolder\BlueMail.BlueMailEmail_t08282y3j4hc4!BlueMail.BlueMailEmail
