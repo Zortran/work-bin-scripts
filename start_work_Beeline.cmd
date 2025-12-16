@@ -1,5 +1,5 @@
 @echo off
-set programs_list= "C:\Program Files\PuTTY\pageant.exe" "C:\Program Files\Omnissa\Omnissa Horizon Client\horizon-client.exe" "C:\Users\zortr\AppData\Local\Programs\time-desktop\TiMe.exe" "C:\Program Files\Telegram Desktop\Telegram.exe" "C:\Program Files\KeePass Password Safe 2\KeePass.exe" "C:\Users\zortr\AppData\Local\Yandex\Punto Switcher\punto.exe" "C:\Users\zortr\AppData\Local\Programs\ktalk\ktalk.exe" "C:\Program Files\TiMe\TiMe.exe" "C:\Program Files\Docker\Docker\Docker Desktop.exe" "C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe"
+set programs_list= "C:\Program Files\Omnissa\Omnissa Horizon Client\horizon-client.exe" "C:\Program Files\Telegram Desktop\Telegram.exe" "C:\Program Files\KeePass Password Safe 2\KeePass.exe" "C:\Users\zortr\AppData\Local\Yandex\Punto Switcher\punto.exe" "C:\Users\zortr\AppData\Local\Programs\ktalk\ktalk.exe" "C:\Program Files\TiMe\TiMe.exe" "C:\Program Files\Docker\Docker\Docker Desktop.exe" "C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe"
 :: "C:\Program Files\TrueConf\Client\TrueConf.exe" "C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE"
 for %%i in (%programs_list%); do (
   echo %%i

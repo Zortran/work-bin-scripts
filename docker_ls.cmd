@@ -7,3 +7,5 @@ echo ==== Images =======
 docker images
 echo ==== Contaners ====
 docker ps -a
+echo ==== Docker DF ====
+docker system df
