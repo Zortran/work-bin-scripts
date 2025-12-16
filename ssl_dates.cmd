@@ -1,0 +1,1 @@
+@openssl x509 -noout -dates -dateopt iso_8601 -in %*
