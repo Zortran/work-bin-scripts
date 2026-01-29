@@ -1,0 +1,1 @@
+@kubectl get deployments,statefulsets,daemonsets,jobs,cronjobs -o jsonpath="{.items[*].spec.template.spec.containers[*].image}" | tr -s '[[:space:]]' '\n' | sort | uniq
