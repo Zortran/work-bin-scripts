@@ -1,0 +1,1 @@
+@docker inspect --format="{{range .Config.Env}}{{println .}}{{end}}" %*
