@@ -1,6 +1,6 @@
 @echo off
-set programs_list= "C:\Program Files\Omnissa\Omnissa Horizon Client\horizon-client.exe" "C:\Program Files\Telegram Desktop\Telegram.exe" "C:\Program Files\KeePass Password Safe 2\KeePass.exe" "%USERPROFILE%\AppData\Local\Programs\ktalk\ktalk.exe" "C:\Program Files\Docker\Docker\Docker Desktop.exe" "C:\Program Files\Buzz\Buzz.exe" "C:\Program Files (x86)\Caramba\Switcher\CarambaSwitcher.exe" "C:\Program Files (x86)\Cisco\Cisco Secure Client\UI\csc_ui.exe"
-:: "C:\Program Files\TrueConf\Client\TrueConf.exe" "C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE" "C:\Program Files\TiMe\TiMe.exe" "%USERPROFILE%\AppData\Local\Yandex\Punto Switcher\punto.exe" "C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe" 
+set programs_list= "C:\Program Files\Omnissa\Omnissa Horizon Client\horizon-client.exe" "C:\Program Files\Telegram Desktop\Telegram.exe" "C:\Program Files\KeePass Password Safe 2\KeePass.exe" "%USERPROFILE%\AppData\Local\Programs\ktalk\ktalk.exe" "C:\Program Files\Docker\Docker\Docker Desktop.exe" "C:\Program Files\Buzz\Buzz.exe" "C:\Program Files (x86)\Caramba\Switcher\CarambaSwitcher.exe" "C:\Program Files (x86)\Cisco\Cisco Secure Client\UI\csc_ui.exe" "C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE"
+:: "C:\Program Files\TrueConf\Client\TrueConf.exe" "C:\Program Files\TiMe\TiMe.exe" "%USERPROFILE%\AppData\Local\Yandex\Punto Switcher\punto.exe" "C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe" 
 for %%i in (%programs_list%); do (
   echo %%i
   if exist %%i (
