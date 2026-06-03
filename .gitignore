@@ -351,3 +351,5 @@ MigrationBackup/
 
 # Any exe
 *.exe
+
+work_bin/
